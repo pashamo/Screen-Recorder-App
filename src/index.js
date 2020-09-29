@@ -11,6 +11,10 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: {
+      enableRemoteModule: true, //requred for 2020 update
+      nodeIntegration: true
+    }
   });
 
   // and load the index.html of the app.
